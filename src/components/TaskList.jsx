@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import Task from "./Task";
-import { TasksContext } from "../providers/TasksProvider";
+import { useTasksContext } from "../providers/TasksProvider";
 
 const TaskList = () => {
-  const { allTasks, handleComplete } = useContext(TasksContext);
+  const { allTasks, handleComplete } = useTasksContext();
 
   return (
     <>

@@ -1,10 +1,9 @@
 import styles from "./Controllers.module.css";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { TasksContext } from "../providers/TasksProvider";
+import { useTasksContext } from "../providers/TasksProvider";
 
 const Controllers = () => {
-  const { deleteCompletedTasks } = useContext(TasksContext);
+  const { deleteCompletedTasks } =useTasksContext();
 
   return (
     <div className={styles.container}>
